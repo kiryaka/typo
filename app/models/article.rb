@@ -6,6 +6,10 @@ class Article < Content
   include TypoGuid
   include ConfigManager
 
+  def merge
+
+  end
+
   serialize :settings, Hash
 
   content_fields :body, :extended

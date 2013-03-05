@@ -3,4 +3,19 @@
 
   <%= render :partial => "form" %>
 
+
+<% end %>
+
+<%= form_tag(form_action, :id => "#{form_type}_form", :class => className) do %>
+
+    <div class=''>
+        <h4><%= _("Merge articles") %></h4>
+        <p class='help-block'>You can merge articles if they are about the same shit.</p>
+        <%= _("Article ID:")%>
+
+            <%= text_field :article, :merge, :class => 'span5' %>
+
+        <%= submit_tag(_('Merge'), {:class => 'btn'}) -%>
+    </div>
+
 <% end %>
